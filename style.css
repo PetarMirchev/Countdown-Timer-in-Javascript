@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@200;300;400;500;600;700&display=swap');
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Anuphan', sans-serif;
+}
+
+
+body 
+{
+  background-color:  rgb(26, 22, 22);
+}
+
+.counters 
+{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background: rgb(26, 22, 22);
+}
+
+
+#time 
+{
+    display: flex;
+    gap: 30px;
+}
+
+
+#time .circle
+{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#time .circle svg 
+{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+
+#time .circle svg circle 
+{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 8;
+    stroke: rgb(34, 31, 31);
+    transform: translate(5px,5px);
+}
+
+
+#time .circle svg circle:nth-child(2) {
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+}
+
+
+#time div 
+{
+    position: absolute;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+#time div span 
+{
+    position: relative;
+    transform: translateX(-50%) translateY(-10px);
+    font-size: 0.35em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+
+#time .dots
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+} 
+
+
+#time .dots::before 
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background: var(--clr);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
+}
+
+
+.newYear
+{
+    font-size: 3rem;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    line-height: 0.6rem;
+}
+
+
+.newYear span 
+{
+    font-size: 3.5rem;
+    font-weight: 300;
+}
