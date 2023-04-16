@@ -57,6 +57,7 @@ body
     fill: transparent;
     stroke-width: 8;
     stroke: rgb(34, 31, 31);
+    stroke-linecap: round;
     transform: translate(5px,5px);
 }
 
@@ -64,6 +65,7 @@ body
 #time .circle svg circle:nth-child(2) {
     stroke: var(--clr);
     stroke-dasharray: 440;
+    stroke-dashoffset: 440;
 }
 
 
