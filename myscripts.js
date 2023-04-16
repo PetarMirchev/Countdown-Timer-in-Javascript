@@ -37,11 +37,11 @@ let x = setInterval( function(){
     seconds.innerHTML = s + "<br><span>Seconds</span></br>";
 
 
-    //animate stroke color
+    //animate stroke color --> style.css  --> #time .circle svg circle:nth-child(2)  --> stroke-dashoffset: 440;
     dd.style.strokeDashoffset = 440 - (440 * d) / 365; // 365 days in an year
     hh.style.strokeDashoffset = 440 - (440 * h) / 24; // 24 hours in an day
     mm.style.strokeDashoffset = 440 - (440 * m) / 60; // 60 min in an hour
-    ss.style.strokeDashoffset = 440 - (440 * s) / 365; // 60 seconds in an min 
+    ss.style.strokeDashoffset = 440 - (440 * s) / 60; // 60 seconds in an min 
 
 
     // animate circle dots
@@ -51,7 +51,7 @@ let x = setInterval( function(){
     sec_dot.style.transform = `rotateZ(${s * 6}deg)`; // 360 deg / 60seconds = 6
 
 
-    // if countdown is over, write some text..
+    // if countdown is over, write some text.. or logic
     if (distance < 0){
         clearInterval(x);
         document.getElementById("time").style.display = 'none';
